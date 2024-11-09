@@ -5,15 +5,16 @@ class Program
     static void Main(string[] args)
     {
         Random randomGenerator = new Random();
-        int magicNumber = randomGenerator.Next(1, 11);
-        Console.WriteLine($"What is the magic number? {magicNumber}");
+        int magicNumber = randomGenerator.Next(1, 101);
+        //Console.WriteLine($"What is the magic number? {magicNumber}");
+        int guess;
 
-        //int guess;
-        
+        //loop code until the user guess the magic number correctly
+        do{
         Console.Write($"What is your guess? ");
 
         string response = Console.ReadLine();
-        int guess = int.Parse(response);
+        guess = int.Parse(response);
         
         if (guess == magicNumber)
         {
@@ -27,6 +28,6 @@ class Program
         {
             Console.WriteLine("Higher");
         }
-        
+        } while (guess != magicNumber);
     }
 }
