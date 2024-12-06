@@ -15,7 +15,7 @@ class Program
         string dateText = theCurrentTime.ToShortDateString();
         //string timeText = theCurrentTime.toString("h:mm tt")
 
-            Console.WriteLine(theCurrentTime);
+        Console.WriteLine(theCurrentTime);
 
 
         

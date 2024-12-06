@@ -29,7 +29,5 @@ class Program
         Console.WriteLine(test4.GetDecimalValue());
 
 
-    
-    
        }
 }
