@@ -30,6 +30,10 @@ class Program
             Random r = new Random();
             int random = r.Next(0, 27);
             scripture.HideRandomWords(random);
+            random = r.Next(0, 27);
+            scripture.HideRandomWords(random);
+            random = r.Next(0, 27);
+            scripture.HideRandomWords(random);
 
         }   
         } while (answer != "quit");
