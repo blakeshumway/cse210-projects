@@ -3,7 +3,8 @@ using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
-    //make sure to leave a comment about the exceeding the requirements to get a 100%
+    //To exceed the requirements on this assignment I made it so the program wont hide words that are already hidden and instead hide a different one.
+    //I did this by checking to see if the number that was chosen was already hidden and incrementing the number by one until it finds a number that isn't hidden.
     static void Main(string[] args)
     {
         Reference reference = new Reference("Ether", 12, 12);

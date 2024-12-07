@@ -22,7 +22,22 @@ public class Scripture
 
     public void HideRandomWords(int numberToHide)
     {
-        _words[numberToHide].Hide();
+        //this is the code that loops until it finds a number that isnt hidden.
+        do
+        {
+            if (_words[numberToHide].IsHidden() == true)
+            {
+                numberToHide += 1;
+                if (numberToHide > _words.Count -1)
+                {
+                    numberToHide = 0;
+                } 
+            }
+        } while (_words[numberToHide].IsHidden() == true && IsCompletelyHidden() == false);
+        
+        
+            _words[numberToHide].Hide();
+        
     }
 
     public string GetDisplayText()
