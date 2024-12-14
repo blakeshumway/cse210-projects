@@ -19,6 +19,7 @@ public class Activity
 
     public void DisplayStaringMessage()
     {
+        Console.Clear();
         Console.WriteLine($"Welcome to the {_name}.");
         Console.WriteLine();
         Console.WriteLine($"{_description}");
