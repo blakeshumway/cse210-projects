@@ -44,7 +44,7 @@ class Program
 
         DateTime endTime = DateTime.Now;
 
-        Console.WriteLine($"You used this program for {endTime.Minute - startTime.Minute} minutes");
+        Console.WriteLine($"You used this program for {endTime.Minute - startTime.Minute} minutes.");
 
 
 
