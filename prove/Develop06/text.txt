@@ -1,0 +1,2 @@
+SimpleGoal,egg,eggy,12,False
+EternalGoal,:eg2,egggggg,10000
