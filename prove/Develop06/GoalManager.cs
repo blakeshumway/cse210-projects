@@ -173,36 +173,40 @@ public class GoalManager
 
     public void LoadGoals()
     {
-        Console.Write("What is the name of the file?: ");
-        string fileName = Console.ReadLine();
-        string[] lines = System.IO.File.ReadAllLines($"{fileName}.txt");
-        foreach (string line in lines)
+        if (_goals.Count > 1)
         {
-            string[] parts = line.Split(",");
-
-            if (parts[0] == "Points")
+            Console.WriteLine("You already have a list loaded.");
+        }
+        else
+        {  
+            Console.Write("What is the name of the file?: ");
+            string fileName = Console.ReadLine();
+            string[] lines = System.IO.File.ReadAllLines($"{fileName}.txt");
+            foreach (string line in lines)
             {
-                _score += int.Parse(parts[1]);
+                string[] parts = line.Split(",");
 
+                if (parts[0] == "Points")
+                {
+                 _score += int.Parse(parts[1]);
+
+                }
+                if (parts[0] == "SimpleGoal")
+                {
+                    SimpleGoal sg = new SimpleGoal(parts[1], parts[2], int.Parse(parts[3]), bool.Parse(parts[4]));
+                    _goals.Add(sg);
+                } 
+                else if (parts[0] == "EternalGoal")
+                {
+                    EternalGoal eg = new EternalGoal(parts[1], parts[2], int.Parse(parts[3]));
+                    _goals.Add(eg);
+                }
+                else if (parts[0] == "ChecklistGoal")
+                {
+                    ChecklistGoal cg = new ChecklistGoal(parts[1], parts[2], int.Parse(parts[3]), int.Parse(parts[4]), int.Parse(parts[5]), int.Parse(parts[6]));
+                    _goals.Add(cg);
+                }   
             }
-            if (parts[0] == "SimpleGoal")
-            {
-                SimpleGoal sg = new SimpleGoal(parts[1], parts[2], int.Parse(parts[3]), bool.Parse(parts[4]));
-                _goals.Add(sg);
-            } 
-            else if (parts[0] == "EternalGoal")
-            {
-                EternalGoal eg = new EternalGoal(parts[1], parts[2], int.Parse(parts[3]));
-                _goals.Add(eg);
-            }
-            else if (parts[0] == "ChecklistGoal")
-            {
-                ChecklistGoal cg = new ChecklistGoal(parts[1], parts[2], int.Parse(parts[3]), int.Parse(parts[4]), int.Parse(parts[5]), int.Parse(parts[6]));
-                _goals.Add(cg);
-            }
-
-
-
         }
 
     }

@@ -1,7 +1,0 @@
-Points,26
-SimpleGoal,work out,no i wont,1,True
-EternalGoal,work it,baby,2
-ChecklistGoal,please,work for me,3,4,5,4
-SimpleGoal,work out,no i wont,1,True
-EternalGoal,work it,baby,2
-ChecklistGoal,please,work for me,3,4,5,1

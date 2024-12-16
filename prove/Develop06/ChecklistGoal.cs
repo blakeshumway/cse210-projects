@@ -66,7 +66,7 @@ public class ChecklistGoal : Goal
             checkBox = "[x]";
         }
 
-        return $"{checkBox} {_shortName} ({_description}) --{_amountCompleted}/{_target} ";
+        return $"{checkBox} {_shortName} ({_description}) -- Currently Completed: {_amountCompleted}/{_target}";
     }
 
 }
