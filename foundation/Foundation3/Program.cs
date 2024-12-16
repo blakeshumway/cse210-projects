@@ -10,7 +10,7 @@ class Program
         activities.Add(activity1);
         RunningActivity activity2 = new RunningActivity("03 Nov 2022", 30, 6);
         activities.Add(activity2);
-        SwimmingActivity activity3 = new SwimmingActivity("03 Nov 2022", 30, 25);
+        SwimmingActivity activity3 = new SwimmingActivity("13 Feb 2023", 30, 25);
         activities.Add(activity3);
 
         foreach(Activity activity in activities)
