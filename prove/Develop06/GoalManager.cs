@@ -173,7 +173,7 @@ public class GoalManager
 
     public void LoadGoals()
     {
-        if (_goals.Count > 1)
+        if (_goals.Count > 0)
         {
             Console.WriteLine("You already have a list loaded.");
         }
